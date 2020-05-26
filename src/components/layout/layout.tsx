@@ -1,9 +1,9 @@
 import React, {ReactNode} from "react";
 import {graphql, useStaticQuery} from "gatsby";
 
-import Header from "./header";
+import Header from "../header/header";
 import "./layout.scss";
-import Footer from "./footer";
+import Footer from "../footer/footer";
 
 interface Props {
     children: ReactNode;

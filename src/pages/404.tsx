@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 import React from "react";
 
 const error404Page: React.FunctionComponent = () => (

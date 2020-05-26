@@ -1,5 +1,6 @@
 import {Link} from "gatsby";
 import React from "react";
+import Avatar from "../avatar/avatar";
 
 interface Props {
     siteTitle: string;
@@ -7,8 +8,9 @@ interface Props {
 
 const header = ({siteTitle}: Props) => (
     <header>
+        <Avatar title={"Avatar"} />
         <div>
-            <h1 style={{margin: 0}}>
+            <h1>
                 <Link to="/">{siteTitle}</Link>
             </h1>
         </div>
