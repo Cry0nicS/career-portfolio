@@ -1,24 +1,34 @@
 import React, {ReactNode} from "react";
 import {graphql, useStaticQuery} from "gatsby";
 
+import Footer from "../footer/footer";
 import Header from "../header/header";
 import "./layout.scss";
-import Footer from "../footer/footer";
 
 interface Props {
     children: ReactNode;
 }
 
-const layout = ({children}: Props) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
+interface MetaQuery {
+    site: {
+        siteMetadata: {
+            title: string;
+        };
+    };
+}
+
+const Layout = ({children}: Props) => {
+    const data: MetaQuery = useStaticQuery(
+        graphql`
+            query SiteTitleQuery {
+                site {
+                    siteMetadata {
+                        title
+                    }
                 }
             }
-        }
-    `);
+        `
+    );
 
     return (
         <>
@@ -31,4 +41,4 @@ const layout = ({children}: Props) => {
     );
 };
 
-export default layout;
+export default Layout;

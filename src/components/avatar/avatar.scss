@@ -1,8 +1,13 @@
+@import "./assets/styles/settings.scss";
+
 .avatar {
     display: inline-block;
-    width: 100px;
-    height: 100px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: $hollow-shadow;
+
+    &.rounded {
+        border-radius: 50%;
+    }
 }

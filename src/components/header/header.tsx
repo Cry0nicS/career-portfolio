@@ -6,7 +6,7 @@ interface Props {
     siteTitle: string;
 }
 
-const header = ({siteTitle}: Props) => (
+const Header = ({siteTitle}: Props) => (
     <header>
         <Avatar title={"Avatar"} />
         <div>
@@ -17,4 +17,4 @@ const header = ({siteTitle}: Props) => (
     </header>
 );
 
-export default header;
+export default Header;

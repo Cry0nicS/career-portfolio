@@ -3,7 +3,7 @@ import {Link} from "gatsby";
 
 import Layout from "../components/layout/layout";
 
-const indexPage: React.FunctionComponent = () => (
+const IndexPage = () => (
     <Layout>
         <h1>Hi people</h1>
         <p>Welcome to my new career portfolio.</p>
@@ -14,4 +14,4 @@ const indexPage: React.FunctionComponent = () => (
     </Layout>
 );
 
-export default indexPage;
+export default IndexPage;

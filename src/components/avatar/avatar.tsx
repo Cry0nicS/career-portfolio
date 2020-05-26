@@ -15,14 +15,15 @@ interface ImageQuery {
     };
 }
 
-// eslint-disable-next-line @typescript-eslint/naming-convention
-const Avatar: React.FC<Props> = ({title}: Props) => {
+const Avatar = ({title}: Props) => {
+    // Currently it is not possible to pass variables (like imageUrl) to the StaticQuery.
+    // See https://github.com/gatsbyjs/gatsby/issues/10482.
     const data: ImageQuery = useStaticQuery(
         graphql`
             query {
                 placeholderImage: file(relativePath: {eq: "elements.png"}) {
                     childImageSharp {
-                        fixed(width: 75, height: 75) {
+                        fixed(width: 100, height: 100) {
                             ...GatsbyImageSharpFixed
                         }
                     }
@@ -31,7 +32,13 @@ const Avatar: React.FC<Props> = ({title}: Props) => {
         `
     );
 
-    return <Img fixed={data.placeholderImage.childImageSharp.fixed} title={title} />;
+    return (
+        <Img
+            className="avatar rounded"
+            fixed={data.placeholderImage.childImageSharp.fixed}
+            title={title}
+        />
+    );
 };
 
 export default Avatar;
