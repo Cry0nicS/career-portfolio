@@ -1,5 +1,5 @@
-import React from "react";
 import {Link, PageProps} from "gatsby";
+import React from "react";
 
 import Layout from "../components/layout/layout";
 

@@ -1,8 +1,8 @@
+import {graphql, useStaticQuery} from "gatsby";
+import Img, {GatsbyImageProps} from "gatsby-image";
 import React from "react";
 
 import "./avatar.scss";
-import {useStaticQuery, graphql} from "gatsby";
-import Img, {GatsbyImageProps} from "gatsby-image";
 
 interface Props {
     imageUrl?: string;

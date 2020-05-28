@@ -1,5 +1,6 @@
 import {Link} from "gatsby";
 import React from "react";
+
 import Avatar from "../avatar/avatar";
 
 interface Props {
