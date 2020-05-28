@@ -1,10 +1,12 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 module.exports = {
     siteMetadata: {
         title: "Adrian Popescu",
         description: "Career portfolio",
         author: "@Cry0nicS",
-        siteUrl: "https://adrianpopescu.dev"
+        siteUrl: "https://adrianpopescu.dev",
+        social: {
+            twitter: "@Cry0nicS"
+        }
     },
     plugins: [
         "gatsby-plugin-sass",
