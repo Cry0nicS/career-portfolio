@@ -10,35 +10,54 @@ interface Props {
 }
 
 interface ImageQuery {
-    placeholderImage: {
+    fallbackAvatarImage: {
         childImageSharp: GatsbyImageProps;
     };
 }
 
-const Avatar = ({title}: Props) => {
-    // Currently it is not possible to pass variables (like imageUrl) to the StaticQuery.
-    // See https://github.com/gatsbyjs/gatsby/issues/10482.
-    const data: ImageQuery = useStaticQuery(
-        graphql`
-            query {
-                placeholderImage: file(relativePath: {eq: "elements.png"}) {
-                    childImageSharp {
-                        fixed(width: 100, height: 100) {
-                            ...GatsbyImageSharpFixed
-                        }
-                    }
+const getDefaultImageData = graphql`
+    {
+        fallbackAvatarImage: file(relativePath: {eq: "elements.png"}) {
+            childImageSharp {
+                fixed(width: 100, height: 100) {
+                    ...GatsbyImageSharpFixed
                 }
             }
-        `
-    );
+        }
+    }
+`;
+
+/**
+ * Returns a rounded 100x100px avatar. If no imageUrl is provided, it falls back to elements.png internal image.
+ */
+const Avatar = ({...params}: Props) => {
+    // Currently it is not possible to pass variables to the StaticQuery in order to make the image size more generic.
+    // See https://github.com/gatsbyjs/gatsby/issues/10482.
+    const {fallbackAvatarImage}: ImageQuery = useStaticQuery(getDefaultImageData);
+
+    if (params.imageUrl !== undefined && params.imageUrl !== "" && validateUrl(params.imageUrl)) {
+        return (
+            <div
+                className="avatar rounded"
+                title={params.title}
+                style={{backgroundImage: `url(${params.imageUrl})`}}
+            />
+        );
+    }
 
     return (
         <Img
             className="avatar rounded"
-            fixed={data.placeholderImage.childImageSharp.fixed}
-            title={title}
+            fixed={fallbackAvatarImage.childImageSharp.fixed}
+            title={params.title}
         />
     );
 };
+
+function validateUrl(string: string): boolean {
+    const pattern = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&/=]*)/u;
+
+    return new RegExp(pattern, "u").test(string);
+}
 
 export default Avatar;

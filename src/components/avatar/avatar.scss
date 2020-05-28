@@ -6,6 +6,8 @@
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: $hollow-shadow;
+    width: 100px;
+    height: 100px;
 
     &.rounded {
         border-radius: 50%;

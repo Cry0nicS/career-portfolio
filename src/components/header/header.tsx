@@ -9,7 +9,7 @@ interface Props {
 
 const Header = ({siteTitle}: Props) => (
     <header>
-        <Avatar title={"Avatar"} />
+        <Avatar title={"The four elements avatar inspired from Legend of Korra"} />
         <div>
             <h1>
                 <Link to="/">{siteTitle}</Link>
