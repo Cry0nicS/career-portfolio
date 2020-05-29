@@ -2,9 +2,11 @@ import {Link} from "gatsby";
 import React from "react";
 
 import Layout from "../components/layout/layout";
+import Metadata from "../components/metadata/metadata";
 
 const IndexPage = () => (
     <Layout>
+        <Metadata title="Welcome" />
         <h1>Hi people</h1>
         <p>Welcome to my new career portfolio.</p>
         <p>Now I'll go build something great.</p>

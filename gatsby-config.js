@@ -1,12 +1,16 @@
 module.exports = {
     siteMetadata: {
-        title: "Adrian Popescu",
-        description: "Career portfolio",
         author: "@Cry0nicS",
+        description: "Career portfolio",
+        image: "/images/korra.jpg",
+        keywords:
+            "career, engineer, developer, software, portofolio, reactjs, gatsbyjs, typescript",
+        language: "en",
         siteUrl: "https://adrianpopescu.dev",
         social: {
             twitter: "@Cry0nicS"
-        }
+        },
+        title: "Adrian Popescu"
     },
     plugins: [
         "gatsby-plugin-sass",
