@@ -3,9 +3,13 @@ import {graphql, useStaticQuery} from "gatsby";
 import React from "react";
 import {Helmet} from "react-helmet";
 
+import Facebook from "./facebook";
+import Twitter from "./twitter";
+
 interface Props {
-    description?: string | null;
-    title: string;
+    contentType?: string;
+    pageDescription?: string | null;
+    pageTitle: string;
 }
 
 interface MetadataQuery {
@@ -20,7 +24,7 @@ interface MetadataQuery {
             social: {
                 twitter: string;
             };
-            title: string;
+            siteTitle: string;
         };
     };
 }
@@ -38,37 +42,49 @@ const getMetadata = graphql`
                 social {
                     twitter
                 }
-                title
+                siteTitle: title
             }
         }
     }
 `;
 
-const Metadata = ({title, description = null}: Props) => {
-    const {pathname} = useLocation();
+const Metadata = ({pageTitle, pageDescription = null, contentType = "website"}: Props) => {
     const {
         site: {siteMetadata}
     }: MetadataQuery = useStaticQuery(getMetadata);
 
-    // Todo: Move Twitter to its own component and define one for Facebook too.
+    const description = pageDescription ?? siteMetadata.description;
+    const title = `${pageTitle} | ${siteMetadata.siteTitle}`;
+    const {pathname} = useLocation();
+
     return (
-        <Helmet title={`${title} | ${siteMetadata.title}`}>
-            <html lang={siteMetadata.language} />
-            <link rel="canonical" href={`${siteMetadata.siteUrl}${pathname}`} />
-            <meta charSet="UTF-8" />
-            <meta name="author" content={siteMetadata.author} />
-            <meta name="description" content={description ?? siteMetadata.description} />
-            <meta name="image" content={siteMetadata.image} />
-            <meta name="keywords" content={siteMetadata.keywords} />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={siteMetadata.social.twitter} />
-            <meta name="twitter:image" content={siteMetadata.image} />
-            <meta name="twitter:title" content={`${title} | ${siteMetadata.title}`} />
-            <meta property="og:description" content={siteMetadata.description} />
-            <meta property="og:image" content={siteMetadata.image} />
-            <meta property="og:title" content={`${title} | ${siteMetadata.title}`} />
-            <meta property="og:url" content={`${siteMetadata.siteUrl}${pathname}`} />
-        </Helmet>
+        <>
+            <Helmet title={title}>
+                <html lang={siteMetadata.language} />
+                <link rel="canonical" href={`${siteMetadata.siteUrl}${pathname}`} />
+                <meta charSet="UTF-8" />
+                <meta name="author" content={siteMetadata.author} />
+                <meta name="description" content={description} />
+                <meta name="image" content={siteMetadata.image} />
+                <meta name="keywords" content={siteMetadata.keywords} />
+            </Helmet>
+            <Facebook
+                author={siteMetadata.author}
+                description={description}
+                image={siteMetadata.image}
+                language={siteMetadata.language}
+                pageTitle={pageTitle}
+                siteUrl={siteMetadata.siteUrl}
+                siteName={siteMetadata.siteTitle}
+                contentType={contentType}
+            />
+            <Twitter
+                creator={siteMetadata.social.twitter}
+                description={description}
+                image={siteMetadata.image}
+                title={title}
+            />
+        </>
     );
 };
 

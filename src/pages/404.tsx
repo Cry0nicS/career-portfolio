@@ -5,7 +5,7 @@ import Metadata from "../components/metadata/metadata";
 
 const NotFound = () => (
     <Layout>
-        <Metadata title="404" />
+        <Metadata pageTitle="404" />
         <h1>You are here!</h1>
         <h2>But nothing found for you #404</h2>
     </Layout>

@@ -6,7 +6,7 @@ import Metadata from "../components/metadata/metadata";
 
 const IndexPage = () => (
     <Layout>
-        <Metadata title="Welcome" />
+        <Metadata pageTitle="Welcome" />
         <h1>Hi people</h1>
         <p>Welcome to my new career portfolio.</p>
         <p>Now I'll go build something great.</p>
