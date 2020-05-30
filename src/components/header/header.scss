@@ -1,0 +1,17 @@
+@import "./assets/styles/settings";
+
+.header {
+    padding: $padding-regular;
+
+    .header-avatar {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        .avatar {
+            top: -30px;
+        }
+    }
+}

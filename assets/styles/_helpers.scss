@@ -1,0 +1,36 @@
+// Helper Mixins
+
+@mixin helper-vertical-align($pos: absolute) {
+    position: $pos;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin helper-horizontal-align {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin helper-bottom-align {
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: $padding-regular;
+}
+
+@mixin ellipsis($width: 100%) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin pseudo-removal {
+    &::before,
+    &::after {
+        display: none;
+    }
+}
