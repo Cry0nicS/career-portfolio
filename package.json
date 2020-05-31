@@ -1,5 +1,5 @@
 {
-    "name": "@Cry0nicS/gamer-portofolio",
+    "name": "@cry0nics/gamer-portofolio",
     "author": "Adrian Popescu",
     "private": true,
     "description": "Career portfolio",
@@ -26,6 +26,7 @@
         "@glen-84/eslint-config": "^1.9.0",
         "@glen-84/prettier-config": "^2.1.1",
         "@glen-84/stylelint-config": "^1.0.1",
+        "@types/react-helmet": "^6.0.0",
         "prettier": "^2.0.5",
         "stylelint": "^13.3.3",
         "stylelint-scss": "^3.17.2",
