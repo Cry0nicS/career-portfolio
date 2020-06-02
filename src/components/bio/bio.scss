@@ -18,7 +18,7 @@
     }
 
     .bio-item {
-        @include font-regular($size: $size-regular);
+        @include font-regular($size-big);
 
         display: inline-block;
         list-style: none;

@@ -1,0 +1,20 @@
+@import "assets/styles/fonts";
+@import "assets/styles/helpers";
+
+.footer {
+    @include font-decor($size-big);
+
+    background-color: $background-light;
+    padding: $padding-regular;
+    color: $text-light;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .social-links {
+        > *:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+}

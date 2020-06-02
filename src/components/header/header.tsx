@@ -15,7 +15,7 @@ interface ImageQuery {
 
 const getHeaderImage = graphql`
     {
-        headerImage: file(relativePath: {eq: "header.png"}) {
+        headerImage: file(relativePath: {eq: "header-poe.png"}) {
             childImageSharp {
                 fluid(maxWidth: 1440, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp

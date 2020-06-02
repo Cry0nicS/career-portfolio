@@ -8,15 +8,15 @@ body {
 }
 
 h1 {
-    @include font-heading($size: $size-huge);
+    @include font-heading($size-huge);
 }
 
 h2 {
-    @include font-regular($size: $size-large);
+    @include font-regular($size-large);
 }
 
 h3 {
-    @include font-regular($size: $size-headings);
+    @include font-regular($size-headings);
 }
 
 a,
