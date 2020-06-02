@@ -1,7 +1,9 @@
 @import "./assets/styles/settings";
+@import "./assets/styles/helpers";
 
 .header {
     padding: $padding-regular;
+    min-height: 250px;
 
     .header-avatar {
         display: flex;
@@ -11,7 +13,22 @@
         align-content: center;
 
         .avatar {
-            top: -30px;
+            top: -20px;
+        }
+    }
+
+    .title {
+        text-align: center;
+        top: 20px;
+        position: relative;
+
+        h1 {
+            color: $text-secondary;
+        }
+
+        h3 {
+            color: $text-discreet;
+            font-style: italic;
         }
     }
 }

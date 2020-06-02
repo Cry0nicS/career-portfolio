@@ -1,15 +1,23 @@
+@import "settings";
+
 // Helper Mixins
 
-@mixin helper-vertical-align($pos: absolute) {
-    position: $pos;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-@mixin helper-horizontal-align {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+/*
+* Requires that the parent element has "position: relative;"
+*/
+@mixin helper-center($horizontal: true, $vertical: true) {
+    position: absolute;
+    @if ($horizontal and $vertical) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if ($horizontal) {
+        left: 50%;
+        transform: translate(-50%, 0);
+    } @else if ($vertical) {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
 }
 
 @mixin helper-bottom-align {

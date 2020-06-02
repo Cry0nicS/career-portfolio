@@ -1,8 +1,15 @@
+// Import font-awesome icons.
+import {library} from "@fortawesome/fontawesome-svg-core";
+import {fab} from "@fortawesome/free-brands-svg-icons";
+import {fas} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "gatsby";
 import React from "react";
+import "../../assets/styles/main.scss";
 
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";
+
+library.add(fab, fas);
 
 const IndexPage = () => (
     <Layout>

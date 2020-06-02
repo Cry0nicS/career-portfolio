@@ -1,0 +1,41 @@
+@import "settings";
+@import "fonts";
+
+body {
+    margin: 0;
+    background: url("../../static/images/EsportsMedia-background.jpeg") no-repeat center top fixed
+        $background-dark;
+}
+
+h1 {
+    @include font-heading($size: $size-huge);
+}
+
+h2 {
+    @include font-regular($size: $size-large);
+}
+
+h3 {
+    @include font-regular($size: $size-headings);
+}
+
+a,
+a:active {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $text-hover;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+    }
+}
+
+.align-center-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
