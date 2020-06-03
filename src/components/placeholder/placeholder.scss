@@ -1,0 +1,26 @@
+@import "assets/styles/settings";
+@import "assets/styles/helpers";
+@import "assets/styles/fonts";
+
+.placeholder {
+    position: relative;
+    text-align: center;
+    background: $background-dark;
+
+    .placeholder-content {
+        @include helper-center(true, true);
+
+        .title {
+            @include font-heading($size-large);
+
+            color: $reddit;
+            padding: 10px 0;
+        }
+
+        .description {
+            @include font-decor($size-big);
+
+            color: $google;
+        }
+    }
+}

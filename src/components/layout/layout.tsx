@@ -23,9 +23,7 @@ const Layout = ({children}: Props) => {
         <div className="page">
             <Header />
             <Bio items={bioItems} />
-            <div>
-                <main>{children}</main>
-            </div>
+            <main className="main-content">{children}</main>
             <Footer />
         </div>
     );

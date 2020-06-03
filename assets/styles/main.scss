@@ -3,8 +3,7 @@
 
 body {
     margin: 0;
-    background: url("../../static/images/EsportsMedia-background.jpeg") no-repeat center top fixed
-        $background-dark;
+    background: $background url("../../static/images/EsportsMedia-background.jpeg") no-repeat fixed center top;
 }
 
 h1 {
