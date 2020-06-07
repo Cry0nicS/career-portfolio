@@ -82,7 +82,12 @@ const PlannerPage = () => {
                     <span>This project is under continuous development.</span>
                 </div>
                 <div className="trello-board">{listElements}</div>
-                <div className="footer-note">Data is updated from Trello once every 24 hours</div>
+                <div className="footer-note">
+                    <span>
+                        All data, including the background, image is fetched using Trello's API.
+                    </span>
+                    <span>Refresh time interval is 24 hours. </span>
+                </div>
             </div>
         </Layout>
     );

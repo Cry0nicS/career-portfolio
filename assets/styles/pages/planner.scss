@@ -7,7 +7,6 @@
     background-position-x: 50%;
     background-position-y: center;
     background-size: cover;
-    min-height: 520px;
 
     .title {
         @include font-regular($size-headings);
@@ -28,6 +27,10 @@
         padding: $padding-regular;
         text-align: right;
         color: #111;
+
+        > * {
+            display: block;
+        }
     }
 }
 
