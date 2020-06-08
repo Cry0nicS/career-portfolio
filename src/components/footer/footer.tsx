@@ -1,11 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
 
-import "./footer.scss";
+import styles from "./footer.module.scss";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className={styles.footer}>
             <span>&copy; {new Date().getFullYear()}</span>
             <span>Made with &#9829;</span>
             <div className="social-links">

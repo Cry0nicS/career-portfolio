@@ -1,9 +1,7 @@
 import {FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
 import React, {ReactNode} from "react";
-import Bio from "../bio/bio";
 
 import Footer from "../footer/footer";
-import Header from "../header/header";
 
 import "./layout.scss";
 
@@ -21,8 +19,9 @@ interface BioElements {
 const Layout = ({children}: Props) => {
     return (
         <div className="page">
-            <Header />
-            <Bio items={bioItems} />
+            {/* Fixme: temporary disabled */}
+            {/*<Header />*/}
+            {/*<Bio items={bioItems} />*/}
             <main className="main-content">{children}</main>
             <Footer />
         </div>

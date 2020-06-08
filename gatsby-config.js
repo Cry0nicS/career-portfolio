@@ -18,7 +18,7 @@ module.exports = {
         title: "Adrian Popescu"
     },
     plugins: [
-        "gatsby-plugin-sass",
+        "gatsby-plugin-scss-typescript",
         "gatsby-plugin-react-helmet",
         {
             resolve: "gatsby-source-filesystem",

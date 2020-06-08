@@ -7,17 +7,17 @@
     text-align: center;
     background: $background-dark;
 
-    .placeholder-content {
+    :global .placeholder-content {
         @include helper-center(true, true);
 
-        .title {
+        :global .title {
             @include font-heading($size-large);
 
             color: $reddit;
             padding: 10px 0;
         }
 
-        .description {
+        :global .description {
             @include font-decor($size-big);
 
             color: $google;

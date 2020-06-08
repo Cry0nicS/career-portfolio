@@ -1,7 +1,7 @@
 import {FontAwesomeIcon, FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
 import React from "react";
 
-import "./placeholder.scss";
+import * as styles from "./placeholder.module.scss";
 
 interface PlaceholderProps {
     description: JSX.Element | string;
@@ -12,7 +12,7 @@ interface PlaceholderProps {
 
 const Placeholder = ({description, icon, height = "200px", title}: PlaceholderProps) => {
     return (
-        <section className="placeholder" style={{minHeight: height}}>
+        <section className={styles.placeholder} style={{minHeight: height}}>
             <div className="placeholder-content">
                 <FontAwesomeIcon {...icon} />
                 <div className="title">{title}</div>
