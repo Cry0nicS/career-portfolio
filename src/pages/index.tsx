@@ -6,10 +6,10 @@ import {fas} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "gatsby";
 import React from "react";
 
-import "../../assets/styles/main.scss";
-
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";
+
+import "../styles/main.scss";
 
 library.add(fab, fas, far);
 

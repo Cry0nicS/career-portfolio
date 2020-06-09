@@ -1,5 +1,5 @@
-@import "assets/styles/fonts";
-@import "assets/styles/helpers";
+@import "../../styles/fonts";
+@import "../../styles/helpers";
 
 .footer {
     @include font-decor($size-big);

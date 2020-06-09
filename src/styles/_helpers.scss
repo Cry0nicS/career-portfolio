@@ -1,4 +1,4 @@
-@import "settings";
+@import "src/styles/settings";
 
 // Helper Mixins
 
@@ -41,4 +41,10 @@
     &::after {
         display: none;
     }
+}
+
+@mixin align--flex-center-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
