@@ -1,10 +1,10 @@
 import {graphql, useStaticQuery} from "gatsby";
 import React from "react";
 
-import "../../assets/styles/pages/planner.scss";
-
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";
+
+import styles from "../styles/pages/planner.module.scss";
 
 interface TrelloCardQuery {
     board: {
@@ -55,14 +55,14 @@ const PlannerPage = () => {
     const listElements = lists.map((list) => {
         const cardElements = list.cards.map((card) => {
             return (
-                <div className="trello-card" key={`${list.id}-${card.id}`}>
+                <div className={styles.card} key={`${list.id}-${card.id}`}>
                     <span>{card.name}</span>
                 </div>
             );
         });
 
         return (
-            <div className="trello-list" key={list.id}>
+            <div className={styles.list} key={list.id}>
                 <h3>{list.name}</h3>
                 {cardElements}
             </div>
@@ -76,17 +76,17 @@ const PlannerPage = () => {
                 pageDescription="List of features planned for implementation and their current status."
             />
             {/* Todo: Check if the retrieved image can be parsed by Gatsby's Image plugin. */}
-            <div className="planner" style={{backgroundImage: `url(${backgroundImage})`}}>
-                <div className="title">
+            <div className={styles.planner} style={{backgroundImage: `url(${backgroundImage})`}}>
+                <div className={styles.title}>
                     <h3>Development planning system</h3>
                     <span>This project is under continuous development.</span>
                 </div>
-                <div className="trello-board">{listElements}</div>
-                <div className="footer-note">
+                <div className={styles.board}>{listElements}</div>
+                <div className={styles.footnote}>
                     <span>
                         All data, including the background, image is fetched using Trello's API.
                     </span>
-                    <span>Refresh time interval is 24 hours. </span>
+                    <span>Refresh time interval is 24 hours.</span>
                 </div>
             </div>
         </Layout>

@@ -2,7 +2,7 @@ import {graphql, useStaticQuery} from "gatsby";
 import Img, {GatsbyImageProps} from "gatsby-image";
 import React from "react";
 
-import "./avatar.scss";
+import styles from "./avatar.module.scss";
 
 interface Props {
     imageUrl?: string;
@@ -38,7 +38,7 @@ const Avatar = ({...params}: Props) => {
     if (params.imageUrl !== undefined && params.imageUrl !== "" && validateUrl(params.imageUrl)) {
         return (
             <div
-                className="avatar rounded"
+                className={`${styles.avatar} ${styles.rounded}`}
                 title={params.title}
                 style={{backgroundImage: `url(${params.imageUrl})`}}
             />
@@ -47,7 +47,7 @@ const Avatar = ({...params}: Props) => {
 
     return (
         <Img
-            className="avatar rounded"
+            className={`${styles.avatar} ${styles.rounded}`}
             fixed={fallbackAvatarImage.childImageSharp.fixed}
             title={params.title}
         />

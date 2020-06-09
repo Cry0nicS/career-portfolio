@@ -11,10 +11,16 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+}
 
-    .social-links {
-        > *:not(:last-child) {
-            margin-right: 10px;
-        }
+.made-with {
+    svg {
+        margin-left: 5px;
+    }
+}
+
+.social-links {
+    > *:not(:last-child) {
+        margin-right: 10px;
     }
 }

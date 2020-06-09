@@ -7,8 +7,11 @@ function Footer() {
     return (
         <footer className={styles.footer}>
             <span>&copy; {new Date().getFullYear()}</span>
-            <span>Made with &#9829;</span>
-            <div className="social-links">
+            <span className={styles.madeWith}>
+                Made with
+                <FontAwesomeIcon icon={["far", "heart"]} title="love" color="#c00" />
+            </span>
+            <div className={styles.socialLinks}>
                 <a href="https://github.com/Cry0nicS/gamer-portofolio" target="_blank">
                     <FontAwesomeIcon icon={["fab", "github"]} size="lg" title="GitHub" />
                 </a>

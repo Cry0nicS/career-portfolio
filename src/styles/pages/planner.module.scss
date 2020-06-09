@@ -1,0 +1,77 @@
+@import "../../../assets/styles/settings";
+@import "../../../assets/styles/fonts";
+@import "../../../assets/styles/forms";
+
+.planner {
+    background-position: 50%;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.title {
+    @include font-regular($size-headings);
+
+    background: hsla(0, 0%, 100%, 0.24);
+    padding: $padding-regular;
+    color: $black;
+
+    span {
+        @include font-decor($size-small);
+
+        display: block;
+    }
+}
+
+.footnote {
+    @include font-decor($size-small);
+
+    padding: $padding-regular;
+    text-align: right;
+    color: #111;
+
+    > * {
+        display: block;
+    }
+}
+
+.board {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    text-align: center;
+    margin: $padding-large;
+    color: $black;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.trello-board {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    text-align: center;
+    margin: $padding-large;
+}
+
+.list {
+    background: hsla(0, 0%, 100%, 0.24);
+    padding: $padding-regular;
+    box-shadow: 0 0 15px 10px rgba($background-light, 0.42);
+}
+
+.card {
+    background: hsla(0, 0%, 50%, 0.24);
+    color: #111;
+    padding: $padding-regular;
+    margin: 5px 0;
+    box-shadow: inset 0 0 15px 6px rgba($background-lighter, 0.75);
+}

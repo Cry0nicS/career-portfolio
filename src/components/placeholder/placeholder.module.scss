@@ -2,25 +2,25 @@
 @import "assets/styles/helpers";
 @import "assets/styles/fonts";
 
-.placeholder {
+.section {
     position: relative;
     text-align: center;
     background: $background-dark;
+}
 
-    :global .placeholder-content {
-        @include helper-center(true, true);
+.content {
+    @include helper-center(true, true);
+}
 
-        :global .title {
-            @include font-heading($size-large);
+.title {
+    @include font-heading($size-large);
 
-            color: $reddit;
-            padding: 10px 0;
-        }
+    color: $reddit;
+    padding: 10px 0;
+}
 
-        :global .description {
-            @include font-decor($size-big);
+.description {
+    @include font-decor($size-big);
 
-            color: $google;
-        }
-    }
+    color: $google;
 }

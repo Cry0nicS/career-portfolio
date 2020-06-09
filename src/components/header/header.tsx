@@ -5,7 +5,7 @@ import React from "react";
 
 import Avatar from "./avatar/avatar";
 
-import "./header.scss";
+import styles from "./header.module.scss";
 
 interface ImageQuery {
     headerImage: {
@@ -29,11 +29,14 @@ const Header = () => {
     const {headerImage}: ImageQuery = useStaticQuery(getHeaderImage);
 
     return (
-        <BackgroundImage Tag="header" className="header" fluid={headerImage.childImageSharp.fluid}>
-            <div className="header-avatar">
+        <BackgroundImage
+            Tag="header"
+            className={styles.header}
+            fluid={headerImage.childImageSharp.fluid}>
+            <div className={styles.avatar}>
                 <Avatar title={"The four elements avatar inspired from Legend of Korra"} />
             </div>
-            <div className="title">
+            <div className={styles.title}>
                 <h1>Adrian Popescu</h1>
                 <h3>Software engineer and esports enthusiast</h3>
             </div>

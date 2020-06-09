@@ -1,7 +1,7 @@
 import {FontAwesomeIcon, FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
 import React from "react";
 
-import "./bio.scss";
+import styles from "./bio.module.scss";
 
 interface BioElement {
     fontAwesomeIconProps: FontAwesomeIconProps;
@@ -13,17 +13,17 @@ interface BioElement {
 const Bio = ({items}: {items: BioElement[]}) => {
     const bioItems = items.map((item) => {
         return (
-            <li className="bio-item" key={item.name + item.title}>
+            <li className={styles.item} key={item.name + item.title}>
                 <FontAwesomeIcon {...item.fontAwesomeIconProps} />
-                <span className="title">{item.title}</span>
+                <span className={styles.itemTitle}>{item.title}</span>
                 {buildBioName(item)}
             </li>
         );
     });
 
     return (
-        <div className="bio-bar">
-            <ul className="bio-list">{bioItems}</ul>
+        <div className={styles.content}>
+            <ul className={styles.list}>{bioItems}</ul>
         </div>
     );
 };

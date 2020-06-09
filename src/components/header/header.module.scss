@@ -1,0 +1,30 @@
+@import "./assets/styles/settings";
+@import "./assets/styles/helpers";
+
+.header {
+    padding: $padding-regular;
+    min-height: 250px;
+}
+
+.avatar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    text-align: center;
+    top: 20px;
+    position: relative;
+
+    h1 {
+        color: $text-secondary;
+    }
+
+    h3 {
+        color: $text-discreet;
+        font-style: italic;
+    }
+}
