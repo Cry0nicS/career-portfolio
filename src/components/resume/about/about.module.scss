@@ -1,0 +1,17 @@
+@import "../resume";
+
+.section {
+    @include section;
+}
+
+.heading {
+    @include heading;
+}
+
+.about {
+    @include content;
+
+    p {
+        margin: 0 0 20px;
+    }
+}

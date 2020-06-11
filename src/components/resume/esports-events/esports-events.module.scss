@@ -1,0 +1,54 @@
+@import "../resume";
+@import "../../../styles/fonts";
+@import "../../../styles/settings";
+
+.section {
+    @include section(4%);
+}
+
+.heading {
+    @include heading;
+}
+
+.esports-events {
+    @include content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.entry {
+    display: flex;
+    flex-flow: row;
+}
+
+.icon {
+    margin-top: 8px;
+    color: $reddit;
+}
+
+.content {
+    @include font-regular($size-small);
+
+    text-align: left;
+    color: $text-discreet;
+    margin-left: 10px;
+
+    .date {
+        color: $reddit;
+    }
+
+    h3 {
+        color: $text-secondary;
+    }
+
+    span {
+        display: block;
+    }
+}

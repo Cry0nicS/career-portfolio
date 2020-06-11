@@ -1,0 +1,37 @@
+@import "../../styles/settings";
+
+@mixin content {
+    padding: 40px;
+    text-align: justify;
+    color: $text-discreet;
+
+    @media screen and (min-width: 768px) {
+        width: 80%;
+    }
+}
+
+@mixin section($lighten: 0) {
+    display: flex;
+    flex-direction: column;
+    background-color: lighten($background-dark, $lighten);
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $background-light;
+    }
+}
+
+@mixin heading {
+    padding: 40px;
+    display: block;
+    color: $text-secondary;
+
+    @media screen and (min-width: 768px) {
+        width: 20%;
+        text-align: right;
+        align-self: center;
+    }
+}
