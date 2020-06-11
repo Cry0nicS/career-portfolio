@@ -46,6 +46,7 @@ module.exports = {
                 display: "minimal-ui",
                 icon: "src/images/elements.png" // This path is relative to the root of the site.
             }
-        }
+        },
+        "react-google-charts"
     ]
 };
