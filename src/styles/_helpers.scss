@@ -1,6 +1,13 @@
 @import "src/styles/settings";
 
 // Helper Mixins
+@mixin content-padding($padding: $padding-regular, $paddingWide: $padding-content) {
+    padding: $padding;
+
+    @media screen and (min-width: 960px) {
+        padding: $paddingWide;
+    }
+}
 
 /*
 * Requires that the parent element has "position: relative;"
@@ -43,7 +50,7 @@
     }
 }
 
-@mixin align--flex-center-middle {
+@mixin align-flex-center-middle {
     display: flex;
     justify-content: center;
     align-items: center;

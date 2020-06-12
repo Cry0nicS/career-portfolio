@@ -10,7 +10,7 @@ const StackActivity = () => {
                 <h3>Stack activity</h3>
                 <span>Coding my way through life</span>
             </div>
-            <div className={styles.about}>
+            <div className={styles.stackActivity}>
                 <Chart
                     width={"100%"}
                     height={"230px"}

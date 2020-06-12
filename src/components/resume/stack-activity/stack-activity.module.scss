@@ -1,17 +1,13 @@
 @import "../resume";
 
 .section {
-    @include section(6%);
+    @include section(3%);
 }
 
 .heading {
     @include heading;
 }
 
-.about {
+.stack-activity {
     @include content;
-
-    p {
-        margin: 0 0 20px;
-    }
 }

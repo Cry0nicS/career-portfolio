@@ -1,7 +1,4 @@
 import React, {ReactNode} from "react";
-
-import BioItems from "../../constants/bio-items";
-import Bio from "../bio/bio";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 
@@ -16,8 +13,7 @@ const Layout = ({children}: Props) => {
         <div className={styles.page}>
             <div className={styles.content}>
                 <Header />
-                <Bio items={BioItems} />
-                <main className="main-content">{children}</main>
+                <main>{children}</main>
             </div>
             <Footer />
         </div>

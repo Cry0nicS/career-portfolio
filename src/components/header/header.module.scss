@@ -2,22 +2,23 @@
 @import "../../styles/helpers";
 
 .header {
-    padding: $padding-regular;
-    min-height: 250px;
+    margin: 0 auto;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.avatar {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.content {
+    @include align-flex-center-middle;
+
+    flex-direction: column;
+    flex-grow: 1;
+
 }
 
 .title {
+    padding-top: 10vh;
     text-align: center;
-    top: 20px;
-    position: relative;
 
     h1 {
         color: $text-secondary;

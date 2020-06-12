@@ -3,6 +3,9 @@ import BackgroundImage from "gatsby-background-image";
 import {GatsbyImageProps} from "gatsby-image";
 import React from "react";
 
+import BioItems from "../../constants/bio-items";
+import Bio from "../bio/bio";
+
 import Avatar from "./avatar/avatar";
 
 import styles from "./header.module.scss";
@@ -17,8 +20,8 @@ const getHeaderImage = graphql`
     {
         headerImage: file(relativePath: {eq: "header-poe.png"}) {
             childImageSharp {
-                fluid(maxWidth: 1440, quality: 100) {
-                    ...GatsbyImageSharpFluid_withWebp
+                fluid(maxWidth: 1920, quality: 100) {
+                    ...GatsbyImageSharpFluid
                 }
             }
         }
@@ -33,13 +36,14 @@ const Header = () => {
             Tag="header"
             className={styles.header}
             fluid={headerImage.childImageSharp.fluid}>
-            <div className={styles.avatar}>
+            <div className={styles.content}>
                 <Avatar title={"The four elements avatar inspired from Legend of Korra"} />
+                <div className={styles.title}>
+                    <h1>Adrian Popescu</h1>
+                    <h3>Software engineer and esports enthusiast</h3>
+                </div>
             </div>
-            <div className={styles.title}>
-                <h1>Adrian Popescu</h1>
-                <h3>Software engineer and esports enthusiast</h3>
-            </div>
+            <Bio items={BioItems} />
         </BackgroundImage>
     );
 };

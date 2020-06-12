@@ -1,3 +1,3 @@
 export const header: string;
-export const avatar: string;
+export const content: string;
 export const title: string;
