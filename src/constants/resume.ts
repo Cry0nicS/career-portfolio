@@ -84,3 +84,50 @@ export const EsportsEventItems = [
         location: "Bucharest, Romania"
     }
 ];
+
+export const ExperienceItems = [
+    {
+        id: 1,
+        companyName: "Company name",
+        date: "2012 - 2015",
+        position: "Back-end developer",
+        location: "Seattle WA, USA",
+        description:
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
+            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
+            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+    },
+    {
+        id: 2,
+        companyName: "Company name",
+        date: "2012 - 2015",
+        position: "Back-end developer",
+        location: "Seattle WA, USA",
+        description:
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
+            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
+            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+    },
+    {
+        id: 3,
+        companyName: "Company name",
+        date: "2012 - 2015",
+        position: "Back-end developer",
+        location: "Seattle WA, USA",
+        description:
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
+            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
+            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+    },
+    {
+        id: 4,
+        companyName: "Company name",
+        date: "2012 - 2015",
+        position: "Back-end developer",
+        location: "Seattle WA, USA",
+        description:
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
+            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
+            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+    }
+];

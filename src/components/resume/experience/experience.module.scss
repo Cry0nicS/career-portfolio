@@ -1,0 +1,51 @@
+@import "../resume";
+
+.section {
+    @include section(4%);
+}
+
+.heading {
+    @include heading;
+}
+
+.experience {
+    @include content;
+}
+
+.entry {
+    position: relative;
+    padding: 10px 0 10px 25px;
+    border-left: 2px solid $background-lighter;
+}
+
+.timeline-mark {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: -6px;
+    top: 17px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px lighten($background-dark, 4%);
+    background-color: $reddit;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    span {
+        display: block;
+    }
+
+    h3 {
+        color: $text-secondary;
+    }
+}
+
+.date {
+    color: $reddit;
+}

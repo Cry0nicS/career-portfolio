@@ -39,7 +39,7 @@ const StackActivity = () => {
                         ],
                         [
                             "ActionScript",
-                            "ActionScript 2014",
+                            "ActionScript",
                             "Adobe Flex...",
                             new Date(2014, 6, 1),
                             new Date(2015, 6, 1),
