@@ -1,12 +1,12 @@
 import {FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
 import {Link} from "gatsby";
-import React from "react";
+import React, {ReactElement} from "react";
 
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";
 import Placeholder from "../components/placeholder/placeholder";
 
-const NotFound = () => {
+const NotFound = (): ReactElement => {
     const placeholderIcon: FontAwesomeIconProps = {
         icon: ["fas", "space-shuttle"],
         size: "6x",

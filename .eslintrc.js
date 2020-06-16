@@ -1,3 +1,5 @@
+const baseConfig = require("@glen-84/eslint-config");
+
 module.exports = {
     extends: ["react-app", "@glen-84"],
     parserOptions: {
@@ -5,7 +7,13 @@ module.exports = {
     },
     rules: {
         // Place to specify ESLint rules.
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/naming-convention": 0 // Should be PascalCase.
+        "@typescript-eslint/naming-convention": [
+            ...baseConfig.rules["@typescript-eslint/naming-convention"],
+            {
+                selector: "variable",
+                format: ["strictCamelCase", "StrictPascalCase"],
+                types: ["function"]
+            }
+        ]
     }
 };

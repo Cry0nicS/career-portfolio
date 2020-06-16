@@ -1,9 +1,9 @@
 import {graphql, useStaticQuery} from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import {GatsbyImageProps} from "gatsby-image";
-import React from "react";
+import React, {ReactElement} from "react";
 
-import BioItems from "../../constants/bio-items";
+import bioElements from "../../constants/bio-items";
 import Bio from "../bio/bio";
 
 import Avatar from "./avatar/avatar";
@@ -28,7 +28,7 @@ const getHeaderImage = graphql`
     }
 `;
 
-const Header = () => {
+const Header = (): ReactElement => {
     const {headerImage}: ImageQuery = useStaticQuery(getHeaderImage);
 
     return (
@@ -43,7 +43,7 @@ const Header = () => {
                     <h3>Software engineer and esports enthusiast</h3>
                 </div>
             </div>
-            <Bio items={BioItems} />
+            <Bio items={bioElements} />
         </BackgroundImage>
     );
 };

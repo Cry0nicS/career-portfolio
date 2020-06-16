@@ -1,6 +1,6 @@
 import {useLocation} from "@reach/router";
 import {graphql, useStaticQuery} from "gatsby";
-import React from "react";
+import React, {ReactElement} from "react";
 import {Helmet} from "react-helmet";
 
 import Facebook from "./facebook";
@@ -48,7 +48,11 @@ const getMetadata = graphql`
     }
 `;
 
-const Metadata = ({pageTitle, pageDescription = null, contentType = "website"}: Props) => {
+const Metadata = ({
+    pageTitle,
+    pageDescription = null,
+    contentType = "website"
+}: Props): ReactElement => {
     const {
         site: {siteMetadata}
     }: MetadataQuery = useStaticQuery(getMetadata);

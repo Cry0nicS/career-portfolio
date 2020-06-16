@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import {Helmet} from "react-helmet";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
     title: string;
 }
 
-const Twitter = (data: Props) => (
+const Twitter = (data: Props): ReactElement => (
     <Helmet>
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content={data.creator} />

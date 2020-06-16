@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby";
 import Img, {GatsbyImageProps} from "gatsby-image";
-import React from "react";
+import React, {ReactElement} from "react";
 
 import styles from "./avatar.module.scss";
 
@@ -30,7 +30,7 @@ const getDefaultImageData = graphql`
 /**
  * Returns a rounded 150x150px avatar. If no imageUrl is provided, it falls back to elements.png internal image.
  */
-const Avatar = ({...params}: Props) => {
+const Avatar = ({...params}: Props): ReactElement => {
     // Currently it is not possible to pass variables to the StaticQuery in order to make the image size more generic.
     // See https://github.com/gatsbyjs/gatsby/issues/10482.
     const {fallbackAvatarImage}: ImageQuery = useStaticQuery(getDefaultImageData);

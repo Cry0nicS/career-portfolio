@@ -8,7 +8,7 @@ interface BioElements {
 }
 
 // While not re-used, moved to a different file to reduce complexity.
-const BioItems: BioElements[] = [
+const bioElements: BioElements[] = [
     {
         fontAwesomeIconProps: {
             icon: ["fab", "pagelines"],
@@ -55,11 +55,11 @@ const BioItems: BioElements[] = [
     }
 ];
 
-function getAgeInYears(birthYear: string) {
+function getAgeInYears(birthYear: string): number {
     const now = new Date();
     const dateOfBirth = new Date(birthYear);
 
     return now.getFullYear() - dateOfBirth.getFullYear();
 }
 
-export default BioItems;
+export default bioElements;

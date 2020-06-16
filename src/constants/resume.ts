@@ -1,12 +1,12 @@
-export const EsportsIndustryItems = [
+export const esportsIndustryItems = [
     {
         id: 1,
         position: 1,
         title: "PGL",
         timeline: "2014-2018",
         description:
-            "In 2014 I worked with PGL on multiple events, like DreamHack Bucharest," +
-            "DreamHack Masters and IeSF World Championship."
+            "In 2014 I worked with PGL on multiple events, like DreamHack Bucharest,"
+            + "DreamHack Masters and IeSF World Championship."
     },
     {
         id: 2,
@@ -14,9 +14,9 @@ export const EsportsIndustryItems = [
         title: "Esports addicts",
         timeline: "2015-2018",
         description:
-            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game" +
-            "players, fans and representative brands alike into a hub of the latest news, detailed statistics," +
-            "insightful interviews and live events for the most famous electronic sports in Romania."
+            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game"
+            + "players, fans and representative brands alike into a hub of the latest news, detailed statistics,"
+            + "insightful interviews and live events for the most famous electronic sports in Romania."
     },
     {
         id: 3,
@@ -24,9 +24,9 @@ export const EsportsIndustryItems = [
         title: "Esports addicts",
         timeline: "2015-2018",
         description:
-            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game" +
-            "players, fans and representative brands alike into a hub of the latest news, detailed statistics," +
-            "insightful interviews and live events for the most famous electronic sports in Romania."
+            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game"
+            + "players, fans and representative brands alike into a hub of the latest news, detailed statistics,"
+            + "insightful interviews and live events for the most famous electronic sports in Romania."
     },
     {
         id: 4,
@@ -34,13 +34,13 @@ export const EsportsIndustryItems = [
         title: "Esports addicts",
         timeline: "2015-2018",
         description:
-            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game" +
-            "players, fans and representative brands alike into a hub of the latest news, detailed statistics," +
-            "insightful interviews and live events for the most famous electronic sports in Romania."
+            "Lead of multiple and diverse teams (editorial, streaming, admins) that thrive to connect video game"
+            + "players, fans and representative brands alike into a hub of the latest news, detailed statistics,"
+            + "insightful interviews and live events for the most famous electronic sports in Romania."
     }
 ];
 
-export const EsportsEventItems = [
+export const esportsEventItems = [
     {
         id: 1,
         title: "The International",
@@ -85,7 +85,7 @@ export const EsportsEventItems = [
     }
 ];
 
-export const ExperienceItems = [
+export const experienceItems = [
     {
         id: 1,
         companyName: "Company name",
@@ -93,9 +93,9 @@ export const ExperienceItems = [
         position: "Back-end developer",
         location: "Seattle WA, USA",
         description:
-            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
-            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
-            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque,"
+            + "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor "
+            + "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
     },
     {
         id: 2,
@@ -104,9 +104,9 @@ export const ExperienceItems = [
         position: "Back-end developer",
         location: "Seattle WA, USA",
         description:
-            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
-            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
-            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque,"
+            + "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor "
+            + "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
     },
     {
         id: 3,
@@ -115,9 +115,9 @@ export const ExperienceItems = [
         position: "Back-end developer",
         location: "Seattle WA, USA",
         description:
-            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
-            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
-            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque,"
+            + "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor "
+            + "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
     },
     {
         id: 4,
@@ -126,8 +126,8 @@ export const ExperienceItems = [
         position: "Back-end developer",
         location: "Seattle WA, USA",
         description:
-            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque," +
-            "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor " +
-            "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+            "Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque,"
+            + "aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor "
+            + "libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
     }
 ];

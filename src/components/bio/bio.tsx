@@ -1,5 +1,5 @@
 import {FontAwesomeIcon, FontAwesomeIconProps} from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, {ReactElement} from "react";
 
 import styles from "./bio.module.scss";
 
@@ -10,16 +10,14 @@ interface BioElement {
     url?: string;
 }
 
-const Bio = ({items}: {items: BioElement[]}) => {
-    const bioItems = items.map((item) => {
-        return (
-            <li className={styles.item} key={item.name + item.title}>
-                <FontAwesomeIcon {...item.fontAwesomeIconProps} />
-                <span className={styles.itemTitle}>{item.title}</span>
-                {buildBioName(item)}
-            </li>
-        );
-    });
+const Bio = ({items}: {items: BioElement[]}): ReactElement => {
+    const bioItems = items.map((item) => (
+        <li className={styles.item} key={item.name + item.title}>
+            <FontAwesomeIcon {...item.fontAwesomeIconProps} />
+            <span className={styles.itemTitle}>{item.title}</span>
+            {buildBioName(item)}
+        </li>
+    ));
 
     return (
         <div className={styles.content}>
@@ -31,10 +29,10 @@ const Bio = ({items}: {items: BioElement[]}) => {
 /**
  * Returns the name of the BioElement with or without an external link, depending on the "url" property.
  */
-function buildBioName(item: BioElement) {
-    if (item.url) {
+function buildBioName(item: BioElement): ReactElement | string {
+    if (item.url !== undefined && item.url !== "") {
         return (
-            <a href={item.url} target="_blank">
+            <a href={item.url} target="_blank" rel="noreferrer">
                 {item.name}
             </a>
         );

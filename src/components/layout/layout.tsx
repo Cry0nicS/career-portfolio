@@ -1,4 +1,4 @@
-import React, {ReactNode} from "react";
+import React, {ReactElement, ReactNode} from "react";
 import Footer from "../footer/footer";
 import Header from "../header/header";
 
@@ -8,16 +8,14 @@ interface Props {
     children: ReactNode;
 }
 
-const Layout = ({children}: Props) => {
-    return (
-        <div className={styles.page}>
-            <div className={styles.content}>
-                <Header />
-                <main>{children}</main>
-            </div>
-            <Footer />
+const Layout = ({children}: Props): ReactElement => (
+    <div className={styles.page}>
+        <div className={styles.content}>
+            <Header />
+            <main>{children}</main>
         </div>
-    );
-};
+        <Footer />
+    </div>
+);
 
 export default Layout;

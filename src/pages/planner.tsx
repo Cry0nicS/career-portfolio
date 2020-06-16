@@ -1,5 +1,5 @@
 import {graphql, useStaticQuery} from "gatsby";
-import React from "react";
+import React, {ReactElement} from "react";
 
 import Layout from "../components/layout/layout";
 import Metadata from "../components/metadata/metadata";
@@ -44,7 +44,7 @@ const getTrelloCards = graphql`
     }
 `;
 
-const PlannerPage = () => {
+const PlannerPage = (): ReactElement => {
     const {
         board: {
             lists,
@@ -53,13 +53,11 @@ const PlannerPage = () => {
     }: TrelloCardQuery = useStaticQuery(getTrelloCards);
 
     const listElements = lists.map((list) => {
-        const cardElements = list.cards.map((card) => {
-            return (
-                <div className={styles.card} key={`${list.id}-${card.id}`}>
-                    <span>{card.name}</span>
-                </div>
-            );
-        });
+        const cardElements = list.cards.map((card) => (
+            <div className={styles.card} key={`${list.id}-${card.id}`}>
+                <span>{card.name}</span>
+            </div>
+        ));
 
         return (
             <div className={styles.list} key={list.id}>

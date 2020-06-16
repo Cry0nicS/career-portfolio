@@ -1,6 +1,6 @@
 import {graphql, useStaticQuery} from "gatsby";
 import Img, {GatsbyImageProps} from "gatsby-image";
-import React from "react";
+import React, {ReactElement} from "react";
 import styles from "./photo-gallery.module.scss";
 
 interface GalleryQuery {
@@ -24,7 +24,7 @@ const getGalleryImages = graphql`
     }
 `;
 
-const PhotoGallery = () => {
+const PhotoGallery = (): ReactElement => {
     const {
         gallery: {images}
     }: GalleryQuery = useStaticQuery(getGalleryImages);

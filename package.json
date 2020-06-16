@@ -33,6 +33,12 @@
         "@glen-84/prettier-config": "^2.1.1",
         "@glen-84/stylelint-config": "^1.0.1",
         "@types/react-helmet": "^6.0.0",
+        "@typescript-eslint/eslint-plugin": "^2.30.0",
+        "@typescript-eslint/parser": "^3.2.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.3",
+        "eslint-plugin-react": "^7.20.0",
         "gatsby-plugin-scss-typescript": "^4.0.12",
         "prettier": "^2.0.5",
         "stylelint": "^13.3.3",
@@ -50,7 +56,8 @@
         "start": "npm run develop",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
-        "lint": "eslint 'src/**/*.tsx'"
+        "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+        "lint:fix": "eslint --fix --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx"
     },
     "repository": {
         "type": "git",

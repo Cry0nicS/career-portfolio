@@ -1,4 +1,4 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import {Helmet} from "react-helmet";
 
 interface Props {
@@ -12,7 +12,7 @@ interface Props {
     contentType: string;
 }
 
-const Facebook = (data: Props) => (
+const Facebook = (data: Props): ReactElement => (
     <Helmet>
         <meta property="og:description" content={data.description} />
         <meta property="og:image" content={data.image} />
