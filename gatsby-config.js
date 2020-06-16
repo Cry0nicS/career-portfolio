@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/naming-convention,@typescript-eslint/restrict-template-expressions */
+"use strict";
+
 // Configure environment variables.
 require("dotenv").config({
     path: `.env.${process.env.NODE_ENV}`
