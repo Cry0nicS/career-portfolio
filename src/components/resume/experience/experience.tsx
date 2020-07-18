@@ -3,7 +3,7 @@ import {experienceItems} from "../../../constants/resume";
 import styles from "./experience.module.scss";
 
 const Experience = (): ReactElement => (
-    <section className={styles.section}>
+    <section>
         <div className={styles.heading}>
             <h3>Professional experience</h3>
             <span>Engineering the future</span>
@@ -17,7 +17,7 @@ const Experience = (): ReactElement => (
                             <span className={styles.date}>{item.date}</span>
                             <h3>{item.companyName}</h3>
                             <span>{item.position}</span>
-                            <span>{item.location}</span>
+                            <span className={styles.location}>{item.location}</span>
                         </div>
                         <div>{item.description}</div>
                     </div>

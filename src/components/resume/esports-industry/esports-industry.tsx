@@ -4,7 +4,7 @@ import {esportsIndustryItems} from "../../../constants/resume";
 import styles from "./esports-industry.module.scss";
 
 const EsportsIndustry = (): ReactElement => (
-    <section className={styles.section}>
+    <section>
         <div className={styles.heading}>
             <h3>Esports activity</h3>
             <span>Gaming is not just a game</span>

@@ -25,11 +25,12 @@
     padding: 10px;
 
     svg {
-        color: $text-secondary;
+        color: $accent;
+        padding-bottom: 10px;
     }
 }
 
-.item-title {
+.name {
     display: block;
     color: $text-secondary;
 }

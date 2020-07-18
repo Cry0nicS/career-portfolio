@@ -2,30 +2,21 @@
 
 $white: #fcfcfc;
 $black: #000;
-$red: #c00;
 $invis: transparent;
 
-$background-dark: #18171c;
-$background: #191919;
-$background-light: #27282d;
-$background-lighter: #343437;
-$background-darkest: #141415;
+$accent: #96a786;
 
-$text-light: #f7f7f0;
-$text-secondary: #9698a3;
+$background-dark: #1a1b1c;
+$background-light: lighten($background-dark, 0.8%);
+
+$text-light: #dcdcdd;
+$text-secondary: #b8b8b8;
 $text-discreet: #737682;
-$text-hover: #ab8569;
-
-$facebook: #3b5998;
-$twitter: #1da1f2;
-$google: #dc4b3f;
-$reddit: #ff5600;
 
 // Font families
 
 $font-primary: "Open-Sans", "Helvetica Neue", helvetica, arial, sans-serif;
 $font-secondary: "Roboto-Condensed", "Helvetica Neue", helvetica, arial, sans-serif;
-$font-decorative: "Abril-Fatface", georgia, times, "Times New Roman", serif;
 
 // Font sizes
 
@@ -44,10 +35,11 @@ $padding-regular: 20px;
 $padding-small: 8px 20px;
 $padding-smaller: 5px 10px;
 $padding-content: 0 15%;
+
 // Borders
 
-$border-light: 1px solid $background-lighter;
-$border-dark: 1px solid $background;
+$border-light: 1px solid #343437;
+$border-dark: 1px solid #141415;
 
 // Shadows
 

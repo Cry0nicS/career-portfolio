@@ -1,32 +1,23 @@
 @import "../../styles/settings";
 @import "../../styles/helpers";
+@import "../../styles/fonts";
 
 @mixin content {
     padding: 40px;
     text-align: justify;
-    color: $text-discreet;
 
     @media screen and (min-width: 768px) {
         width: 80%;
     }
 }
 
-@mixin section($lighten: 0) {
-    @include content-padding;
-
-    display: flex;
-    flex-direction: column;
-    background-color: lighten($background-dark, $lighten);
-
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
-}
-
 @mixin heading {
     padding: 40px;
     display: block;
-    color: $text-secondary;
+
+    h3 {
+        color: $text-light;
+    }
 
     @media screen and (min-width: 768px) {
         width: 20%;

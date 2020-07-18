@@ -2,10 +2,6 @@
 @import "../../../styles/fonts";
 @import "../../../styles/settings";
 
-.section {
-    @include section(2%);
-}
-
 .heading {
     @include heading;
 }
@@ -34,25 +30,34 @@
 
 .icon {
     margin-top: 8px;
-    color: $reddit;
+    color: $accent;
 }
 
 .content {
     @include font-regular($size-small);
 
     text-align: left;
-    color: $text-discreet;
     margin-left: 10px;
 
     .date {
-        color: $reddit;
+        display: block;
+        color: $accent;
     }
 
     h3 {
-        color: $text-secondary;
+        color: $text-light;
     }
 
-    span {
+    .location {
         display: block;
+        color: $text-discreet;
+    }
+}
+
+.prize-pool {
+    display: inline;
+
+    span {
+        color: $accent;
     }
 }

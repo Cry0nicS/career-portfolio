@@ -1,9 +1,5 @@
 @import "../resume";
 
-.section {
-    @include section(3%);
-}
-
 .heading {
     @include heading;
 }

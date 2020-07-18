@@ -11,11 +11,12 @@ interface BioElements {
 const bioElements: BioElements[] = [
     {
         fontAwesomeIconProps: {
-            icon: ["fab", "pagelines"],
+            icon: ["fab", "discord"],
             size: "lg"
         },
-        title: "Age",
-        name: getAgeInYears("1990").toString()
+        title: "Discord",
+        name: "Cry0nicS#9999",
+        url: "https://discordapp.com/users/147264738609463296/"
     },
     {
         fontAwesomeIconProps: {
@@ -24,7 +25,16 @@ const bioElements: BioElements[] = [
         },
         title: "Location",
         name: "Malta, Europe",
-        url: "https://goo.gl/maps/p91fUuoDve92"
+        url: "https://goo.gl/maps/VJX4uZVEvfMFr4HQ8"
+    },
+    {
+        fontAwesomeIconProps: {
+            icon: ["fab", "chrome"],
+            size: "lg"
+        },
+        title: "Website",
+        name: "AdrianPopescu.dev",
+        url: "https://adrianpopescu.dev/"
     },
     {
         fontAwesomeIconProps: {
@@ -37,29 +47,22 @@ const bioElements: BioElements[] = [
     },
     {
         fontAwesomeIconProps: {
-            icon: ["fab", "internet-explorer"],
-            size: "lg"
-        },
-        title: "Website",
-        name: "AdrianPopescu.dev",
-        url: "https://adrianpopescu.dev/"
-    },
-    {
-        fontAwesomeIconProps: {
             icon: ["fas", "envelope"],
             size: "lg"
         },
         title: "Email",
-        name: "AdrianPopescu90@gmail.com",
-        url: "mailto:AdrianPopescu90@gmail.com?subject=Greeting from your website"
+        name: "AdrianPopescu@yahoo.com",
+        url: "mailto:AdrianPopescu@yahoo.com?subject=Greeting from your website"
+    },
+    {
+        fontAwesomeIconProps: {
+            icon: ["fab", "steam"],
+            size: "lg"
+        },
+        title: "Steam",
+        name: "Cry0nicS",
+        url: "https://steamcommunity.com/id/Cry0nicS/"
     }
 ];
-
-function getAgeInYears(birthYear: string): number {
-    const now = new Date();
-    const dateOfBirth = new Date(birthYear);
-
-    return now.getFullYear() - dateOfBirth.getFullYear();
-}
 
 export default bioElements;

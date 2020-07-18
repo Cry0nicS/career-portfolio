@@ -30,7 +30,7 @@ const PhotoGallery = (): ReactElement => {
     }: GalleryQuery = useStaticQuery(getGalleryImages);
 
     return (
-        <section className={styles.section}>
+        <section>
             <div className={styles.heading}>
                 <h3>Gallery</h3>
                 <span>The face behind the voice</span>

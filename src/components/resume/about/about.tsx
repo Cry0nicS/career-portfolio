@@ -3,7 +3,7 @@ import React, {ReactElement} from "react";
 import styles from "./about.module.scss";
 
 const About = (): ReactElement => (
-    <section className={styles.section}>
+    <section>
         <div className={styles.heading}>
             <h3>About me</h3>
             <span>The voice of reason</span>

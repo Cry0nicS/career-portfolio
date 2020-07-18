@@ -15,12 +15,9 @@
 .title {
     @include font-heading($size-large);
 
-    color: $reddit;
     padding: 10px 0;
 }
 
 .description {
-    @include font-decor($size-big);
-
-    color: $google;
+    @include font-regular($size-big);
 }

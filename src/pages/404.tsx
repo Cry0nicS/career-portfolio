@@ -10,7 +10,7 @@ const NotFound = (): ReactElement => {
     const placeholderIcon: FontAwesomeIconProps = {
         icon: ["fas", "space-shuttle"],
         size: "6x",
-        color: "#dc4b3f",
+        color: "#96a786",
         title: "Tribute to Falcon 9"
     };
 

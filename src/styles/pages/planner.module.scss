@@ -16,14 +16,14 @@
     color: $black;
 
     span {
-        @include font-decor($size-small);
+        @include font-regular($size-small);
 
         display: block;
     }
 }
 
 .footnote {
-    @include font-decor($size-small);
+    @include font-regular($size-small);
 
     padding: $padding-regular;
     text-align: right;
@@ -72,5 +72,5 @@
     color: #111;
     padding: $padding-regular;
     margin: 5px 0;
-    box-shadow: inset 0 0 15px 6px rgba($background-lighter, 0.75);
+    box-shadow: inset 0 0 15px 6px rgba($background-light, 0.75);
 }

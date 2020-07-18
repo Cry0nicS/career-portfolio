@@ -2,7 +2,7 @@
 @import "../../styles/helpers";
 
 .footer {
-    @include font-decor($size-big);
+    @include font-regular($size-big);
 
     background-color: $background-light;
     padding: $padding-regular;

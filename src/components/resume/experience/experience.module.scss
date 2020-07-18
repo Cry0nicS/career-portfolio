@@ -1,9 +1,5 @@
 @import "../resume";
 
-.section {
-    @include section(4%);
-}
-
 .heading {
     @include heading;
 }
@@ -15,7 +11,7 @@
 .entry {
     position: relative;
     padding: 10px 0 10px 25px;
-    border-left: 2px solid $background-lighter;
+    border-left: 2px solid $accent;
 }
 
 .timeline-mark {
@@ -25,8 +21,8 @@
     left: -6px;
     top: 17px;
     border-radius: 50%;
-    box-shadow: 0 0 0 6px lighten($background-dark, 4%);
-    background-color: $reddit;
+    box-shadow: 0 0 0 6px lighten($background-light, 4%);
+    background-color: $accent;
 }
 
 .info {
@@ -34,7 +30,7 @@
     grid-template-columns: 1fr;
 
     @media screen and (min-width: 600px) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
 
     span {
@@ -42,10 +38,14 @@
     }
 
     h3 {
-        color: $text-secondary;
+        color: $text-light;
     }
 }
 
 .date {
-    color: $reddit;
+    color: $accent;
+}
+
+.location {
+    color: $text-discreet;
 }

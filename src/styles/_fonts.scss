@@ -1,28 +1,20 @@
 @import "src/styles/settings";
 
-@mixin font-regular($size: $size-regular) {
-    font-family: $font-primary;
-    text-transform: none;
-    font-size: $size;
-    line-height: $size * 1.5;
-    font-weight: 500;
-    margin: 0;
-}
-
 @mixin font-heading($size: $size-headings) {
     font-family: $font-secondary;
     text-transform: uppercase;
+    color: $text-light;
     font-size: $size;
     line-height: $size;
     font-weight: 600;
     margin: 0;
 }
 
-@mixin font-decor($size: $size-large) {
-    font-family: $font-decorative;
+@mixin font-regular($size: $size-regular) {
+    font-family: $font-primary;
     text-transform: none;
     font-size: $size;
-    line-height: $size;
+    line-height: $size * 1.5;
     font-weight: 500;
     margin: 0;
 }
@@ -34,14 +26,4 @@
     margin-top: 4px;
     font-size: $size;
     line-height: $size;
-}
-
-@mixin font-spaced($size: $size-smaller) {
-    font-size: $size;
-    line-height: $size * 1.4;
-    text-transform: uppercase;
-    letter-spacing: $size / 3;
-    font-family: $font-primary;
-    font-weight: 500;
-    margin: 0;
 }

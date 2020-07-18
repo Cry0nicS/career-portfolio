@@ -2,10 +2,6 @@
 @import "../../../styles/fonts";
 @import "../../../styles/settings";
 
-.section {
-    @include section(1%);
-}
-
 .heading {
     @include heading;
 }
@@ -29,21 +25,20 @@
 }
 
 .position {
-    color: $reddit;
+    color: $accent;
 }
 
 .content {
     @include font-regular($size-small);
 
-    color: $text-discreet;
     margin-left: 10px;
 
     h3 {
-        color: $text-secondary;
+        color: $text-light;
     }
 
     span {
-        color: $reddit;
+        color: $accent;
         display: block;
     }
 }

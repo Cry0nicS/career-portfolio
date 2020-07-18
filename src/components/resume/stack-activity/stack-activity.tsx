@@ -4,7 +4,7 @@ import {Chart} from "react-google-charts";
 import styles from "./stack-activity.module.scss";
 
 const StackActivity = (): ReactElement => (
-    <section className={styles.section}>
+    <section>
         <div className={styles.heading}>
             <h3>Stack activity</h3>
             <span>Coding my way through life</span>
@@ -68,7 +68,7 @@ const StackActivity = (): ReactElement => (
                     ],
                     [
                         "HTML",
-                        "HTML & CSS/SASS",
+                        "HTML&CSS",
                         "Foundation",
                         new Date(2015, 8, 15),
                         new Date(),
@@ -80,8 +80,8 @@ const StackActivity = (): ReactElement => (
                 options={{
                     gantt: {
                         trackHeight: 35,
-                        innerGridTrack: {fill: "#26282d"},
-                        innerGridDarkTrack: {fill: "#202126"},
+                        innerGridTrack: {fill: "#262728"},
+                        innerGridDarkTrack: {fill: "#222425"},
                         labelStyle: {
                             fontSize: 20,
                             color: "#757575"

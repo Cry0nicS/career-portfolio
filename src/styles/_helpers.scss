@@ -1,10 +1,10 @@
 @import "src/styles/settings";
 
 // Helper Mixins
-@mixin content-padding($padding: $padding-regular, $paddingWide: $padding-content) {
+@mixin content-padding($padding: 0, $paddingWide: $padding-content) {
     padding: $padding;
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: 1200px) {
         padding: $paddingWide;
     }
 }

@@ -1,0 +1,39 @@
+@import "../../styles/settings";
+@import "../../styles/helpers";
+
+.resume {
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 768px) {
+        section {
+            > div {
+                &:nth-child(even) {
+                    background: $background-dark;
+                }
+
+                &:nth-child(odd) {
+                    background: $background-light;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        > section {
+            @include content-padding;
+
+            flex-direction: row;
+
+            &:nth-child(even) {
+                background: $background-dark;
+            }
+
+            &:nth-child(odd) {
+                background: $background-light;
+            }
+        }
+    }
+}

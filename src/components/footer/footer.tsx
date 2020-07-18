@@ -6,10 +6,6 @@ import styles from "./footer.module.scss";
 const Footer = (): ReactElement => (
     <footer className={styles.footer}>
         <span>&copy; {new Date().getFullYear()}</span>
-        <span className={styles.madeWith}>
-            Made with
-            <FontAwesomeIcon icon={["far", "heart"]} title="love" color="#c00" />
-        </span>
         <div className={styles.socialLinks}>
             <a href="https://github.com/Cry0nicS/gamer-portofolio" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={["fab", "github"]} size="lg" title="GitHub" />

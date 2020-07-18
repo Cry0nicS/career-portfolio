@@ -13,9 +13,8 @@ interface BioElement {
 const Bio = ({items}: {items: BioElement[]}): ReactElement => {
     const bioItems = items.map((item) => (
         <li className={styles.item} key={item.name + item.title}>
-            <FontAwesomeIcon {...item.fontAwesomeIconProps} />
-            <span className={styles.itemTitle}>{item.title}</span>
-            {buildBioName(item)}
+            <FontAwesomeIcon {...item.fontAwesomeIconProps} title={item.title} />
+            <span className={styles.name}>{buildBioName(item)}</span>
         </li>
     ));
 
