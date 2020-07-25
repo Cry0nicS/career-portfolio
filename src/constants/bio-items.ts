@@ -51,7 +51,7 @@ const bioElements: BioElements[] = [
             size: "lg"
         },
         title: "Email",
-        name: "AdrianPopescu@yahoo.com",
+        name: "Email me",
         url: "mailto:AdrianPopescu@yahoo.com?subject=Greeting from your website"
     },
     {

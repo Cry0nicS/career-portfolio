@@ -17,7 +17,7 @@ interface ImageQuery {
 
 const getDefaultImageData = graphql`
     {
-        fallbackAvatarImage: file(relativePath: {eq: "elements.png"}) {
+        fallbackAvatarImage: file(relativePath: {eq: "avatar.png"}) {
             childImageSharp {
                 fixed(width: 150, height: 150) {
                     ...GatsbyImageSharpFixed
@@ -28,7 +28,7 @@ const getDefaultImageData = graphql`
 `;
 
 /**
- * Returns a rounded 150x150px avatar. If no imageUrl is provided, it falls back to elements.png internal image.
+ * Returns a rounded 150x150px avatar. If no imageUrl is provided, it falls back to avatar.png internal image.
  */
 const Avatar = ({...params}: Props): ReactElement => {
     // Currently it is not possible to pass variables to the StaticQuery in order to make the image size more generic.

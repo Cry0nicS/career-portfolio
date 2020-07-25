@@ -7,19 +7,17 @@ import Avatar from "./avatar/avatar";
 
 import styles from "./header.module.scss";
 
-const Header = (): ReactElement => {
-    return (
-        <header className={styles.header}>
-            <div className={styles.content}>
-                <Avatar title={"The four elements avatar inspired from Legend of Korra"} />
-                <div className={styles.title}>
-                    <h1>Adrian Popescu</h1>
-                    <h3>Software engineer and esports enthusiast</h3>
-                </div>
+const Header = (): ReactElement => (
+    <header className={styles.header}>
+        <div className={styles.content}>
+            <Avatar title={"The four elements avatar inspired from Legend of Korra"} />
+            <div className={styles.title}>
+                <h1>Adrian Popescu</h1>
+                <h3>Software engineer and esports enthusiast</h3>
             </div>
-            <Bio items={bioElements} />
-        </header>
-    );
-};
+        </div>
+        <Bio items={bioElements} />
+    </header>
+);
 
 export default Header;

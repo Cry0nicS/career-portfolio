@@ -18,6 +18,7 @@
         "gatsby-plugin-react-helmet": "^3.3.4",
         "gatsby-plugin-sharp": "^2.6.11",
         "gatsby-plugin-typescript": "2.4.6",
+        "gatsby-source-contentful": "^2.3.31",
         "gatsby-source-filesystem": "^2.3.11",
         "gatsby-source-trello": "^1.0.10",
         "gatsby-transformer-sharp": "^2.5.5",

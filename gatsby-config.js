@@ -50,6 +50,13 @@ module.exports = {
                 icon: "src/images/elements.png" // This path is relative to the root of the site.
             }
         },
-        "react-google-charts"
+        "react-google-charts",
+        {
+            resolve: "gatsby-source-contentful",
+            options: {
+                spaceId: process.env.CONTENTFUL_SPACE_ID,
+                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+            }
+        }
     ]
 };
